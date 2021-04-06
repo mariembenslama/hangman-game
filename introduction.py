@@ -40,3 +40,15 @@ def continueHangmanTuto():
 def startHangman():
     print('\n\n')
     print('Game start!\n\n')
+
+def continueGame():
+
+    confirm = input('Do you want to continue playing? [Yes/No]: ')
+    while(not response(confirm)):
+        confirm = input('Do you want to continue playing? [Yes/No]: ')
+
+    if(disagree(confirm)):
+        print('Thank you for playing, hope to see you again!')
+        return False
+
+    return True
