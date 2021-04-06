@@ -1,2 +1,8 @@
-def questionError(confirm):
-    return not confirm.lower().startswith('y') and not confirm.lower().startswith('n')
+def response(confirm):
+    return confirm.lower().startswith('y') or confirm.lower().startswith('n')
+
+def agree(response):
+    return response.lower().startswith('y')
+
+def disagree(response):
+    return response.lower().startswith('n')
