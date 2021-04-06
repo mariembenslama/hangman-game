@@ -9,7 +9,7 @@ switcher = {
 vocabulary = {
     1: ["bear", "camel", "cat", "kitten", "cow", "crab", "crocodile", "bird", "deer", "dog", "puppy", "dolphin", "duck", "elephant", "fish", 
         "fox", "giraffe", "goat", "hedgehog", "horse", "jellyfish", "kangaroo", "whale", "lion", "monkey", "octopus", "peacock", "pig",
-        "rabbit", "seahorse", "shark", "sheep", "shrimp", "snake", "starfish", "tiger", "turtle", "whale", "wolf", "zebra"]
+        "rabbit", "seahorse", "shark", "sheep", "shrimp", "snake", "starfish", "tiger", "turtle", "whale", "wolf", "zebra"],
     2: ["belt", "bikini", "blouse", "boots", "boxers", "bra", "cardigan", "cap", "pants", "coat", "dress",
         "dress", "gloves", "hat", "hoodie", "jacket", "jeans", "leggings", "mittens", "pyjamas", 
         "panties", "trousers", "pantyhose", "pullover", "raincoat", "scarf", "shirt", "shoes", "shorts",
