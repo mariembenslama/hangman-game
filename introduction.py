@@ -36,3 +36,7 @@ def continueHangmanTuto():
         hangmanTuto()
     else:
         print("Good! then let's pass to the game")
+
+def startHangman():
+    print('\n\n')
+    print('Game start!\n\n')

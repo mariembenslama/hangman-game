@@ -8,7 +8,6 @@ userIntro()
 continueHangman()
 continueHangmanTuto()
 
-print('\n\n')
-print('Game start!\n\n')
+startHangman()
 vocabulary = contextChoice()
-modeChoice(vocabulary)
+showVocabulary(vocabulary) if(modeChoice()) else None
