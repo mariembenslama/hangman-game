@@ -1,5 +1,5 @@
 from rich import print
-from utils import questionError
+from utils import response, disagree
 
 def hangmanIntro():
     print('Hi, welcome to [bold magenta]Hangman[/bold magenta] game!')
@@ -17,11 +17,10 @@ def userIntro():
 def continueHangman():
 
     confirm = input('Do you want to start the game? [Yes/No]: ')
-    while(questionError(confirm)):
-        print(confirm.lower())
+    while(not response(confirm)):
         confirm = input('Do you want to start the game? [Yes/No]: ')
 
-    if(confirm.lower() == 'no'):
+    if(disagree(confirm)):
         print("Thank you! let's play another time!")
         exit()
 
@@ -30,11 +29,10 @@ def continueHangman():
 def continueHangmanTuto():
 
     confirm = input("Do you know the rules of the game? [Yes/No]: ")
-    while(questionError(confirm)):
-        print(confirm.lower())
+    while(not response(confirm)):
         confirm = input("Do you know the rules of the game? [Yes/No]: ")
 
-    if(confirm.lower() == 'no'):
+    if(disagree(confirm)):
         hangmanTuto()
     else:
         print("Good! then let's pass to the game")
