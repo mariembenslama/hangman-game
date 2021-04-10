@@ -32,9 +32,9 @@ def continueHangman():
 
 def continueHangmanTuto():
 
-    confirm = input("Do you know the rules of the game? [Yes/No]: ")
+    confirm = input(_("do_you_know_the_rules_of_the_game_yes_no"))
     while(not response(confirm)):
-        confirm = input("Do you know the rules of the game? [Yes/No]: ")
+        confirm = input(_("do_you_know_the_rules_of_the_game_yes_no"))
 
     if(disagree(confirm)):
         hangmanTuto()

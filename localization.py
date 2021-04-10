@@ -7,7 +7,8 @@ english = {
     "lets_start_the_game": "Let's start the game!",
     "do_you_want_to_start_the_game_Yes_No": "Do you want to start the game? [Yes/No]: ",
     "thank_you_lets_play_another_time": "Thank you! let's play another time!",
-    "alright_lets_do_it": "Alright! let's do it!"
+    "alright_lets_do_it": "Alright! let's do it!",
+    "do_you_know_the_rules_of_the_game_yes_no": "Do you know the rules of the game? [Yes/No]: "
 }
 
 french = {
@@ -17,7 +18,8 @@ french = {
     "lets_start_the_game": "Commençons le jeu!",
     "do_you_want_to_start_the_game_Yes_No": "Voulez-vous démarrer le jeu? [Yes/No]",
     "thank_you_lets_play_another_time": "Merci! jouons une autre fois!",
-    "alright_lets_do_it": "Bien! Faisons le!"
+    "alright_lets_do_it": "Bien! Faisons le!",
+    "do_you_know_the_rules_of_the_game_yes_no": "Connaissez-vous les règles du jeu? [Yes/No]: "
 }
 
 def local():
