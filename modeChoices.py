@@ -8,4 +8,4 @@ def modeChoice():
 
 def showVocabulary(vocabulary):
     print('this is the vocabulary we will be using for this game:\n')
-    inspect(vocabulary, all = True)
+    print(vocabulary)
