@@ -60,8 +60,5 @@ def initInputWord(word, inputWord):
     print(inputWord + ' (' + str(len(word)) + ')')
     return inputWord
 
-def finishHangman(word, score):
-    return score == len(word)
-
 def drawHangman(loss):
     print(_(hangmanBody.get(loss, 'Incorrect body part index')))
