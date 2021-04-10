@@ -1,11 +1,12 @@
 from rich import inspect
 from utils import response, agree
 from rich import print
+from localization import _ 
 
 def modeChoice():
-    mode = input('Easy mode? [Yes/No]: ')
+    mode = input(_("easy_mode_yes_no"))
     return True if(response(mode) and agree(mode)) else False
 
 def showVocabulary(vocabulary):
-    print('this is the vocabulary we will be using for this game:\n')
+    print(_("this_is_the_vocab_that_we_will_be_using"))
     print(vocabulary)

@@ -1,18 +1,19 @@
 import random
+from localization import _
 
 bodyParts = 10
 
 hangmanBody = {
-    1: 'a stick is drawn!',
-    2: 'a rope is drawn!',
-    3: 'a head is drawn!',
-    4: 'a neck is drawn!',
-    5: 'a shoulder is drawn!',
-    6: 'a right hand is drawn!',
-    7: 'a left hand is drawn!',
-    8: 'a body is drawn!',
-    9: 'a right foot is drawn!',
-    10: 'a left foot is drawn!'
+    1: "stick_drawn",
+    2: "rope_drawn",
+    3: "head_drawn",
+    4: "neck_drawn",
+    5: "shoulder_drawn",
+    6: "right_hand_drawn",
+    7: "left_hand_drawn",
+    8: "body_drawn",
+    9: "right_foot_drawn",
+    10: "left_foot_drawn",
 }
 
 def play(vocabulary):
@@ -27,7 +28,7 @@ def play(vocabulary):
     inputWord = initInputWord(word, inputWord)
 
     while(loss < bodyParts and score < len(word)):
-        guess = input('Your Guess: ')
+        guess = input(_("your_guess"))
         if(correct(guess, word)):
             score += 1
             inputWord = display(word, word.find(guess.lower()), inputWord)
@@ -36,9 +37,9 @@ def play(vocabulary):
             drawHangman(loss)
 
     if(loss == bodyParts):
-        print('Sorry! this is your lose and our win! Your can try again if you want!\n')
+        print(_("sorry_you_lose"))
     else:
-        print('You won!, congrats! the right guess was: \n', word.upper())
+        print(_("you_win"), word.upper())
         
 
 
@@ -63,4 +64,4 @@ def finishHangman(word, score):
     return score == len(word)
 
 def drawHangman(loss):
-    print(hangmanBody.get(loss, 'Incorrect body part index'))
+    print(_(hangmanBody.get(loss, 'Incorrect body part index')))

@@ -1,4 +1,5 @@
 from vocabularies import vocabulary, switcher, questionRange
+from localization import _
 
 def contextChoice():
     
@@ -6,16 +7,16 @@ def contextChoice():
 
     for choice in switcher:
         switcherQuestion += str(choice) + '. ' + switcher.get(choice, "Invalid switcher choice!") + '\n'
-    choice = input(switcherQuestion + '\nYour choice: ')
+    choice = input(switcherQuestion + _("your_choice"))
 
     if(not choice.isdigit()):
 
-        print('Invalid choice, please choose a number!')
+        print(_("invalid_choice_choose_a_number"))
         return contextChoice()
 
     elif(int(choice) not in range(1, questionRange + 1)):
 
-        print('Invalid choice, please choose a number between 1 to %s !' %questionRange)
+        print(_("invalid_choice_please_choose_number_from_1_to_") + "%s !" %questionRange)
         return contextChoice()
 
     else:
