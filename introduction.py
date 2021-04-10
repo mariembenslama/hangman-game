@@ -1,6 +1,6 @@
 from rich import print
 from utils import response, disagree
-
+from localization import _
 
 def intro():
 
@@ -10,23 +10,25 @@ def intro():
     continueHangmanTuto()
 
 def hangmanIntro():
-    print('Hi, welcome to [bold magenta]Hangman[/bold magenta] game!')
+    print(_('hi_welcome_to_hangman'))
 
 
 def userIntro():
-    name = input("What's your name? ")
-    print("Nice to meet you [bold magenta]" + name + "[/bold magenta]!, let's start the game!")
+    name = input(_('whats_your_name'))
+    print(_("nice_to_meet_you")+
+        " [bold magenta]" + name + "[/bold magenta]! "+
+        _("lets_start_the_game"))
 
 def continueHangman():
-    confirm = input('Do you want to start the game? [Yes/No]: ')
+    confirm = input(_("do_you_want_to_start_the_game_Yes_No"))
     while(not response(confirm)):
-        confirm = input('Do you want to start the game? [Yes/No]: ')
+        confirm = input(_("do_you_want_to_start_the_game_Yes_No"))
 
     if(disagree(confirm)):
-        print("Thank you! let's play another time!")
+        print(_("thank_you_lets_play_another_time"))
         exit()
 
-    print("Alright! let's do it!")
+    print(_("alright_lets_do_it"))
 
 def continueHangmanTuto():
 

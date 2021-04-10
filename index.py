@@ -4,7 +4,9 @@ from contextChoices import contextChoice
 from modeChoices import modeChoice, showVocabulary
 from levels import play
 from utils import response, disagree
+from localization import _, local
 
+local()
 intro()
 
 startHangman()
