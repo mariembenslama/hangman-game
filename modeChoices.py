@@ -1,3 +1,4 @@
+from rich import inspect
 from utils import response, agree
 from rich import print
 
@@ -6,4 +7,5 @@ def modeChoice():
     return True if(response(mode) and agree(mode)) else False
 
 def showVocabulary(vocabulary):
-    print('this is the vocabulary we will be using for this game:\n', vocabulary)
+    print('this is the vocabulary we will be using for this game:\n')
+    print(vocabulary)
