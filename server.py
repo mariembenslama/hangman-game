@@ -1,9 +1,10 @@
-import http.server
-import socketserver
+from flask import Flask, json
 
-PORT = 8080
-Handler = http.server.SimpleHTTPRequestHandler
+api = Flask(__name__)
 
-with socketserver.TCPServer(("", PORT), Handler) as httpd:
-    print("serving at port", PORT)
-    httpd.serve_forever()
+@api.route('/', methods=['GET'])
+def get_companies():
+  return 'hi'
+
+if __name__ == '__main__':
+    api.run()
