@@ -39,26 +39,22 @@ def continueHangmanTuto():
     if(disagree(confirm)):
         hangmanTuto()
     else:
-        print("Good! then let's pass to the game")
-
+        print(_("good_lets_start_the_game"))
+ 
 def hangmanTuto():
-    print("Hangman is a sort of guess game, player 1 choose a word of gives alphabets number of the word"+
-          ", player 2 tries to guess the alphabets one by one. With each wrong guess, player 1 draws a hanged man"+
-          "body parts. When player 2 doesn't guess until the body is drawn completely, he loses! "+
-          "Play the game here for quick practice: https://www.gamestolearnenglish.com/hangman/ !")
+    print(_("hangman_tuto"))
 
 def startHangman():
-    print('\n\n')
-    print('Game start!\n\n')
+    print(_("game_start"))
 
 def continueGame():
 
-    confirm = input('Do you want to continue playing? [Yes/No]: ')
+    confirm = input(_("do_you_want_to_continue_playing"))
     while(not response(confirm)):
-        confirm = input('Do you want to continue playing? [Yes/No]: ')
+        confirm = input(_("do_you_want_to_continue_playing"))
 
     if(disagree(confirm)):
-        print('Thank you for playing, hope to see you again!')
+        print(_("thank_you_for_playing_see_you_again"))
         return False
 
     return True
