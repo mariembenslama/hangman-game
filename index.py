@@ -1,21 +1,19 @@
 from rich import print
-from introduction import *
-from contextChoices import *
-from modeChoices import *
-from levels import *
+from introduction import intro, startHangman, continueGame
+from contextChoices import contextChoice
+from modeChoices import modeChoice, showVocabulary
+from levels import play
 from utils import response, disagree
 
-hangmanIntro()
-userIntro()
-continueHangman()
-continueHangmanTuto()
+intro()
 
 startHangman()
-play = True
-while(play):
+
+keepPlaying = True
+while(keepPlaying):
     vocabulary = contextChoice()
     showVocabulary(vocabulary) if(modeChoice()) else None
-    levelOne()
-    play = continueGame()
+    play(vocabulary)
+    keepPlaying = continueGame()
 
 exit()
