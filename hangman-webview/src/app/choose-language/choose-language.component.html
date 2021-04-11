@@ -1,0 +1,9 @@
+<ul class="menu">
+    <li><a href="#">Language</a>
+        <ul class="submenu">
+            <li *ngFor="let item of languages">
+                <a href="#" (click)="setLaguage(item.language)">{{item.language}}</a>
+            </li>
+        </ul>
+    </li>
+</ul>
